@@ -1,0 +1,90 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.synapse-header {
+  /* background-color: #0d47a1; */
+  color: white;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+.header-option-sm {
+  margin-bottom: 2px;
+  position: sticky;
+  /* background-color: #0d47a1; */
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* display: none; */
+}
+.synapse-logo {
+  /* background-color: #0d48a1e4; */
+  border-radius: 50px;
+  box-shadow: inset 2px 2px 20px #0d47a1;
+}
+.nav {
+  color: white;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+
+.banner-section {
+    background-image: url('./public/images/abner.png'); 
+    background-size: cover; /* Make sure the image covers the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 2rem; /* Padding of 2rem */
+    min-height: 400px;
+
+          
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .synapse-header {
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px 0px;
+    height: 400px;
+    padding: 20px 0px;
+    justify-content: space-around;
+    transition: top 0.3s ease;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+  }
+
+  .synapse-logo {
+    display: none;
+  }
+  .synapse-header {
+    margin-top: -500px;
+  }
+}
+@media only screen and (min-width: 769px) {
+    .header-option-sm {
+        display: none;
+      }
+  }
+  
