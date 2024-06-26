@@ -4,11 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synapse-Home</title>
+    <title>SynapseSkills</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <style>
+        .popup{
+            width: 400px;
+            height: 600px;
+            background-color: aqua;
+            position: absolute;
+            z-index: 1000;
+            margin: auto;
+            top: 100px;
+            
+        }
+    </style>
 </head>
 
 <body>
@@ -62,36 +74,21 @@
         <div class="accordion border-b border-gray-200 mb-4">
             <button
                 class="accordion-header w-full bg-[#003366] font-bold py-2 px-6 text-white focus:outline-none text-2xl ">
-                Current Course
+                Current Courses
             </button>
-            <div class="grid grid-cols-1 md:grid-cols-2   p-2">
-                <div class="add-image mx-auto ">
-                    <img src="./public/images/ml-adds.jpg" alt="add">
-                </div>
-
-                <div class="add-contant border-r p-2">
-                    <h2 class="text-center font-bold text-2xl underline">Machine Learning For Everybody</h2>
-                    <div class="add-contantn text-center pt-10">
-                        <p><b class="text-xl text-red-600">Features</b></p>
-                        <p>Machine Learning, Deep Learning, Supervised, Unsupervised & reinforcement Learning</p>
-                        <hr>
-                        <p>Duration: <b>4 hours</b></p>
-                        <p>Learning Mode: <b>Online</b></p>
-                        <p>Completion Deadline: <b>Sunday 30/06/2024</b></p>
-                        <p>Meetup Date: <b>Announced Soon</b></p>
-                        <p>Registration Date: <b>till 22/06-2024</b></p>
-                        <div class="pt-2">
-                            <button type="button" class="btn btn-dark btn-sm"><a
-                                    href="https://www.youtube.com/watch?v=i_LwzRVP7bg">Course Link</a></button>
-                            <button type="button" class="btn btn-primary btn-sm"><a
-                                    href="https://forms.gle/Mb49CgVZBuZr6fgo7">Registration Link</a></button>
-                        </div>
-                    </div>
+            <div class="grid grid-cols-1   p-2">
+                <div class="bg-red-300">
+                    <img src="./public/images/synapse-summer-ads (1).jpg" alt="" class="w-[190%]">
                 </div>
             </div>
 
         </div>
     </div>
+
+    <!-- Popup -->
+     <!-- <div class="popup">
+
+     </div> -->
 
 
     <!-- Contant -->
