@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Listing</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-gray-100">
+            <!-- Banner -->
+            <div class="bg-blue-900 w-full">
+                <img src="../../public/books/design/2.jpg" alt="" class="w-full md:h-auto">
+            </div>
+            <div class="p-2 flex justify-center gap-5 bg-blue-900 text-gray-300">
+                <p class="hover:text-white duration-500"><a href="../../public/synapse-summer-ads (1).pdf" download="Synapse-Summer-Courses">Download-Ad</a></p>
+                <p class="hover:text-white duration-500"><a href="../../pages/books/index.html">Books</a></p>
+                <p class="hover:text-white duration-500"><a href="../../index.html">Home</a></p>
+            </div>
+    <div class="container mx-auto p-2 md:p-10">
+
+        <ul class="nav nav-tabs" id="bookTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="programming-tab" data-toggle="tab" href="#programming" role="tab" aria-controls="programming" aria-selected="true">Programming</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="self-development-tab" data-toggle="tab" href="#self-development" role="tab" aria-controls="self-development" aria-selected="false">Self Development</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="Design-books-tab" data-toggle="tab" href="#Design-books" role="tab" aria-controls="Design-books" aria-selected="false">Design Books</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="bookTabsContent">
+            <div class="tab-pane fade show active" id="programming" role="tabpanel" aria-labelledby="programming-tab">
+                <div class="mt-4" id="programming-books"></div>
+            </div>
+            <div class="tab-pane fade" id="self-development" role="tabpanel" aria-labelledby="self-development-tab">
+                <div class="mt-4" id="self-development-books"></div>
+            </div>
+            <div class="tab-pane fade" id="Design-books" role="tabpanel" aria-labelledby="Design-books-tab">
+                <div class="mt-4" id="Design-books-list"></div>
+            </div>
+        </div>
+    </div>
+    <div class="foots p-2 flex flex-wrap justify-center items-center gap-x-5">
+        <p>© 2024 Copyright: Synapse</p>
+        <p>Developed by : <span>Synapse Team</span></p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            const books = [
+    
+    // Programming
+    {
+        category: 'programming',
+        title: 'HTML & CSS',
+        description: 'Design and Build websites',
+        author: 'Jon Duckett',
+        language: 'English',
+        downloadLink: '../../public/books/programming/syn-book-programming (0).pdf'
+    },
+    {
+        category: 'programming',
+        title: 'FastAPI',
+        description: 'Modern Python Web Development',
+        author: 'Bill Lubanovic',
+        language: 'English',
+        downloadLink: '../../public/books/programming/syn-book-programming (1).pdf'
+    },
+
+    {
+        category: 'programming',
+        title: 'JavaScript The Definitive Guide',
+        description: "Master the World's Most-Used Programming Language",
+        author: 'David Flanagan',
+        language: 'English',
+        downloadLink: '../../public/books/programming/syn-book-programming (2).pdf'
+    },
+    {
+        category: 'programming',
+        title: 'Python Crash Course',
+        description: "A Hands-On Project Based Introduction to Programming.",
+        author: 'Eric Matthes',
+        language: 'English',
+        downloadLink: '../../public/books/programming/syn-book-programming (3).pdf'
+    },
+    {
+        category: 'programming',
+        title: 'Learning Typescript',
+        description: "Enhance your Web Development Skills Using Type-Safe Javascript.",
+        author: 'Josh Goldberg',
+        language: 'English',
+        downloadLink: '../../public/books/programming/syn-book-programming (4).pdf'
+    },
+    {
+        category: 'programming',
+        title: 'Arrays in Javascript',
+        description: "Learn Arrays in Depth",
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/programming/syn-book-programming (5).pdf'
+    },
+
+    // Design
+    {
+        category: 'Design',
+        title: 'Designing and Prototyping Interfaces with Figma',
+        description: "Learn essential UX/UI design principles by creating interactive prototypes for mobile, tablet, and desktop",
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/design/syn-book-programming (1).pdf'
+    },
+
+
+
+    // Personal Development
+
+    {
+        title: "The 48 Laws of Power",
+        description: " This book provides 48 laws based on historical examples of power dynamics, strategies, and manipulations to gain and maintain power in various social and professional settings.",
+        author: "Robert Greene",
+        category : 'self-development',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (1).pdf'
+    },
+
+
+    {
+        title: " The Laws of Human Nature",
+        description: "It Examines recurring patterns in human behavior, offering strategies to understand yourself and others for success in various aspects of life. ",
+        author: "Robert Greene ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (2).pdf'
+    },
+
+    {
+        title: "The Power of Now",
+        description: "It Guides readers towards inner peace by emphasizing the importance of present-moment awareness and letting go of the mental chatter about the past and future. ",
+        author: "Eckhart Tolle ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (3).pdf'
+    },
+
+
+    {
+        title: "The 80/20 Principle",
+        description: "The 80/20 principle, also known as the Pareto principle, states that roughly 80% of the effects come from 20% of the causes. It applies to various aspects of life, suggesting that most of the results come from a minority of the efforts. ",
+        author: "Richard Koch ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (4).pdf'
+    },
+
+    {
+        title: "The Compound Effect ",
+        description: "It argues that small, consistent choices and actions over time can dramatically impact your success in any area of life. It emphasizes the power of daily habits and avoiding negative choices.",
+        author: "Darren Hardy ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (5).pdf'
+    },
+
+    {
+        title: "The POWER of Your Subconscious Mind ",
+        description: "xplores the potential of your subconscious to influence your life. It offers techniques for harnessing its power for personal growth, achievement, and overcoming limitations. ",
+        author: "Joseph Murphy ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (6).pdf'
+    },
+
+    {
+        title: "Think & Grow Rich ",
+        description: "A philosophy for achieving wealth through positive mental attitude, goal setting, visualization, and persistence. It's a self-help classic that emphasizes the power of mindset for success.",
+        author: "Napoleon Hill ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (8).pdf'
+    },
+
+    {
+        title: "Make Your Bed ",
+        description: "highlights the importance of starting small and completing small tasks with discipline, which can lead to accomplishing bigger goals. ",
+        author: "Admiral William H. McRaven ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (9).pdf'
+    },
+
+    {
+        title: "How To Get More From Life ",
+        description: "Getting more from life, to me, isn’t a specific action or a 12-step plan. It’s a philosophy that is always geared towards improvement. It’s about never being satisfied with the status quo, and having an insatiable hunger to improve the quality of your life and the quality of the things you achieve in it. ",
+        author: "Scott H Young ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (10).pdf'
+    },
+
+    {
+        title: "How to Stop Procastination ",
+        description: "Stop Procastination, Symptoms and Caueses ",
+        author: "Celestine Chua ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (11).pdf'
+    },
+
+    {
+        title: "Atomic Habits ",
+        description: "The book focuses on the idea that habits, good or bad, are the compound interest of self-improvement. By focusing on small changes in our routines, we can create a system that will help us achieve our goals. ",
+        author: "James Clear ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (12).pdf'
+    },
+
+    {
+        title: "Eat That Frog ",
+        description: "Eat That Frog! 21 Great Ways to Stop Procrastinating and Get More Done in Less Time by Brian Tracy is a productivity guide.  The title refers to tackling your most important task (the frog) first thing to avoid procrastination and boost your efficiency. ",
+        author: "Brain Tracy ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (14).pdf'
+    },
+
+    {
+        title: "THE SEVEN HABITS OF HIGHLY EFFECTIVE PEOPLE ",
+        description: "It details seven habits that, when internalized, can lead to a fulfilling life and successful career. The book emphasizes independence (habits 1-3) for self-mastery and then interdependence (habits 4-6) for effective collaboration, all grounded in continuous self-renewal (habit 7). ",
+        author: "Stephen R. Covey ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (16).pdf'
+    },
+    {
+        title: "How to Win Friends & Influence People ",
+        description: "The book offers practical advice on building relationships, improving communication skills, and becoming more influential. Carnegie emphasizes the importance of sincerity, empathy, and positive reinforcement in building strong relationships. ",
+        author: "Dale Carnegie ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (17).pdf'
+    },
+    {
+        title: "The Magic Of Thinking Big ",
+        description: " ",
+        author: "The Magic of Thinking Big set audacious goals and believe in yourself to achieve them. ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (18).pdf'
+    },
+    {
+        title: "The Secret ",
+        description: "The Secret by Rhonda Byrne is a self-help book based on the Law of Attraction. It claims positive thoughts can attract positive experiences into your life. You 'ask, believe, receiv' to manifest your desires. ",
+        author: "Rhonda Byrne ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (19).pdf'
+    },
+    {
+        title: "Rich Dad Poor Dad ",
+        description: "Rich Dad Poor Dad is a starting point for anyone looking to gain control of their financial future. ",
+        author: "Robert T.Kiyosaki ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (20).pdf'
+    },
+
+    {
+        title: "The 5 Seconds Rule ",
+        description: " It promotes a method of overcoming hesitation and fear by counting down from 5 to take action on your goals. The idea is to interrupt self-doubt and build courage to pursue what you want. ",
+        author: "Mel Robbins. ",
+        category : 'self-development',
+        author: '@CodeBustler & @Coder_aishya',
+        language: 'English',
+        downloadLink: '../../public/books/personal-development/syn-book-pd (21).pdf'
+    },
+
+];
+     
+            function displayBooks(category) {
+                const containerId = `${category}-books`;
+                const container = $(`#${containerId}`);
+                container.empty();
+                
+                books.forEach(book => {
+                    if (book.category === category) {
+                        const bookElement = `
+                            <div class="card my-5 text-gray-700 text-lg hover:bg-gray-900 hover:text-gray-200 duration-500">
+                                <div class="row no-gutters items-center d-flex justify-content-center align-items-center text-center py-4">
+                                    <div class="col-md-2 flex justify-center ">
+                                        <img src="../../public/images/bookcover/book-cover.jpg" class="card-img shadow-md  w-40 h-48" alt="${book.title}">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title font-bold text-xl">${book.title}</h5>
+                                            <p class="card-text">${book.description}</p>
+                                            <p class="card-text"><small class="text-muted">Author: ${book.author}</small></p>
+                                            <p class="card-text"><small class="text-muted">Language: ${book.language}</small></p>
+                                        </div>
+                                       
+                                    </div>
+                                     <div class="col-md-2">   
+                                          <a href="${book.downloadLink}" class="btn btn-info"  target="_blank">Read Book<a/>
+                                        <br/> <br/>
+                                        <a href="${book.downloadLink}" download="synapse-books" class="btn btn-primary"> Download<a/>
+                                        </div>
+                                </div>
+                            </div>
+                        `;
+                        container.append(bookElement);
+                    }
+                });
+            }
+
+            displayBooks('programming');
+            displayBooks('self-development');
+            displayBooks('Design');
+
+            $('#bookTabs a').on('click', function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
+</body>
+</html>
