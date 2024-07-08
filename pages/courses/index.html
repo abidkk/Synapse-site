@@ -60,6 +60,52 @@
             <p class="hover:text-white duration-500"><a href="../../index.html">Home</a></p>
         </div>
 
+
+
+
+
+
+
+        <!-- Course Pages -->
+        <div class="course_pages flex flex-wrap gap-5 justify-center items-center py-20">
+
+            <div class="px-5 py-2 bg-blue-500 hover:bg-blue-800 cursor-pointer duration-500 text-white flex justify-center items-center">
+               <a href="./programming"><button> Programming & AI</button></a>
+            </div>
+            <div class="px-5 py-2 bg-blue-500 hover:bg-blue-800 cursor-pointer duration-500 text-white flex justify-center items-center">
+                <a href="./design/"><button> Graphic Design</button></a>
+             </div>
+             <div class="px-5 py-2 bg-blue-500 hover:bg-blue-800 cursor-pointer duration-500 text-white flex justify-center items-center">
+                <a href="./marketing/"><button> Digital Marketing</button></a>
+             </div>
+             <div class="px-5 py-2 bg-blue-500 hover:bg-blue-800 cursor-pointer duration-500 text-white flex justify-center items-center">
+                <a href="./personal_development/"><button> Personal Development</button></a>
+             </div>
+             <div class="px-5 py-2 bg-blue-500 hover:bg-blue-800 cursor-pointer duration-500 text-white flex justify-center items-center">
+                <a href="./office/"><button> MS-Office</button></a>
+             </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
         <div class="tabs pt-5">
             <ul class="flex flex-wrap gap-4 justify-center">
                 <li class="tab  text-white px-2 py-1 text-center rounded-md cursor-pointer" data-category="Programming">
@@ -77,9 +123,9 @@
         <div class="categories-titie flex justify-center ">
             <h4 id="categ-title" class="text-cetner text-3xl pt-10 text-gray-600 opacity-70">Category</h4>
 
-        </div>
+        </div> -->
 
-        <div id="course-container" class=" flex flex-wrap gap-x-5 gap-y-10 justify-center pt-14 py-20 px-2 "></div>
+        <div id="course-container" class=" flex flex-wrap gap-x-5 gap-y-10 justify-center py-20 px-2 "></div>
         <!-- <div class="flex flex-col text-center justify-center ">
             <h3 class="text-center text-4xl text-red-500 pt-20">Courses will be Available on <b>30 June 2024</b></h3>
             <div class="p-5">
@@ -90,8 +136,8 @@
             </a>
         </div> -->
         <section class="course-reg flex flex-col justify-center items-center gap-2 pb-10">
-            <a href="https://forms.gle/yYEqpoAvsENoXDoH6">            <button class="bg-blue-700 px-12 py-2  text-white hover:rounded-tr-md hover:rounded-bl-md hover:scale-110 duration-500 ">Apply Here</button>
-                
+            <!-- <a href="https://forms.gle/yYEqpoAvsENoXDoH6">            <button class="bg-blue-700 px-12 py-2  text-white hover:rounded-tr-md hover:rounded-bl-md hover:scale-110 duration-500 ">Apply Here</button>
+                 -->
             </a>
             <p class="text-gray-500 text-center px-2 md:px-10">Note: All courses are self-paced. You will receive course material, support, and guidance from the Synapse Community. </p>
             <p class="text-gray-500 text-center px-2 md:px-10">تمام کورسز خود سیکھنے پر مبنی ہیں ۔ کپیونٹی کر طرف سے آپ کو کورس کا مواد اور رہنمائی فراہم کر جائے گی۔ </p>
@@ -138,7 +184,7 @@
     </div>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+    <!-- <script>
         const cBox = document.getElementById("course-container");
         let catTit = document.getElementById("categ-title")
 
@@ -246,12 +292,12 @@
                 courseId: "1",
                 title: "HTML Crash Course",
                 subtitle: "A comprehensive guide to HTML ",
-                duration: "1.5 hours",
+                duration: "2 hours",
                 language: "Urdu/Hindi",
                 category: "Programming",
                 Platform: "Youtube",
                 courseContent: "Introduction, Basics, Advanced Topics",
-                courseContentLink: "https://www.youtube.com/watch?v=iVCzmDwIQpA",
+                courseContentLink: "https://www.youtube.com/watch?v=HcOc7P5BMi4&t=5028s",
                 imageUrl: "https://cdn.pixabay.com/photo/2017/02/05/00/19/web-design-2038872_640.jpg"
                 //  "https://cdn.pixabay.com/photo/2023/09/06/18/10/ai-generated-8237711_640.jpg"
             },
@@ -341,7 +387,7 @@
             },
             {
                 courseId: "1",
-                title: "Machine Learning Crash Course",
+                title: "Intro To Machine Learning & Road Map",
                 subtitle: "Become a Machine Learning Engineer",
                 duration: "4 hours",
                 language: "English",
@@ -488,9 +534,11 @@
                                         <li>Language: <span class="text-black">${course.language}</span></li>
                                         <li>Category: <span class="text-black">${course.category}</span></li>
                                         <li>Platform: <span class="text-black">${course.Platform}</span></li>
+                                        <li>Course Link: <span class="text-black"><a href="${course.courseContentLink}" class="text-blue-600"  target="_blank">click here</a></span></li>
                                          <a href="https://forms.gle/yYEqpoAvsENoXDoH6">  <button class="bg-blue-700 px-4 py-2 mt-2 text-white hover:bg-blue-800 duration-500">Apply Now</button>
-                                       </a>
-                                        </ul>
+                                            </a>
+                                       
+                                            </ul>
                                 </div>
                             </details>
                
@@ -518,7 +566,7 @@
         if (tabs.length > 0) {
             tabs[0].click();
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
