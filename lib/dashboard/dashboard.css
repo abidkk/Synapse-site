@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.main{
+    height: 100%;
+    width: 100vh;
+}
+.dashboard-header{
+    padding: 5px 20px;
+    width: 100vw;
+    height: 85px;
+    background-color: #eeefef;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+ 
+}
+
+.daschboard-logo{
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top:5px;
+}
+
+.logout-btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: #00394f;
+    color: white;
+}

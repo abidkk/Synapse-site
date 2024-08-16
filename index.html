@@ -2,357 +2,715 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SynapseSkills</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <style>
-        .popup {
-            width: 400px;
-            height: 600px;
-            background-color: aqua;
-            position: absolute;
-            z-index: 1000;
-            margin: auto;
-            top: 100px;
+  <meta charset="utf-8" />
+  <title>SynapseSkills</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Free HTML Templates" name="keywords" />
+  <meta content="Free HTML Templates" name="description" />
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
 
-        }
-    </style>
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Flaticon Font -->
+  <link href="../lib/flaticon/font/flaticon.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/Popups.css">
+  <link rel="stylesheet" href="/lib/pupups/popups.css">
+
+
+  </style>
+  <style>
+    .not-allowed{
+      cursor: not-allowed;
+    }
+  </style>
 </head>
 
-<body class="bg-gray-100">
-    <div class="header-option-sm bg-[#003366] ">
-        <!-- Logo -->
-        <div class="synapse-logo-sm"><img src="./public/logo/synapse.png" alt="logo" width="200" height="150">
-        </div>
-        <div class="menu-icon">
-            <img src="./public/icons/menu-icon.png" alt="menu" width="40" height="40">
-        </div>
-    </div>
+<body>
+  <!-- Navbar Start -->
+  <div class="container-fluid bg-light position-relative shadow">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+      <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px">
 
-    <div class="synapse-header bg-[#003366] text-lg px-2 md:px-10 fixed w-full shadow-md">
-
-        <!-- Logo -->
-        <div class="synapse-logo"><img src="./public/logo/synapse.png" alt="logo" width="200" height="150">
-        </div>
-
-        <!-- Links -->
-        <div class="nav">
-            <p class="nav-home"><a href="#">Home</a></p>
-            <p><a href="./pages/courses/index.html">Courses</a></p>
-            <p><a href="./pages/meetups/index.html">Meetups</a></p>
-            <p><a href="./pages/about-us/index.html">About Us</a></p>
-            <p><a href="./pages/contact-us/index.html">Contact Us</a></p>
-        </div>
-
-        <!-- community -->
-        <div class="join-cummunity">
-            <button class="btn btn-primary font-bold px-4 font-sans"><a
-                    href="./pages/courses/machine-learning/index.html">L.M.S</a></button>
-        </div>
-
-    </div>
-
-    <!--Top Popup -->
-    <section class="flex justify-center items-center w-[98%] md:w-[60%] shadow-6xl ">
-        <div id="t-popup" class="t-popup flex flex-col gap-2 pt-24 md:pt-10 justify-center items-center">
-            <div>
-                <h2>Synapse Onsite Course</h2>
-                <h3 class="text-4xl lg:text-6xl font-bold drop-shadow-lg">Web Development</h3>
-                <a href="https://forms.gle/gMi6DY79wjYHc9Ca8">
-                    <p class="pt-2 md:pt-4 text-blue-600 px-4 py-2 bg-blue-500 text-white w-40 text-center m-2">Apply
-                        Now</p>
-                </a>
-
+        <img src="./assets/logos/synapse_logo.png" alt="synapse_logo" width="200" height="70">
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav font-weight-bold mx-auto py-0">
+          <a href="index.html" class="nav-item nav-link active">Home</a>
+          <a href="./pages/about.html" class="nav-item nav-link">About</a>
+          <a href="./pages/courses.html" class="nav-item nav-link">Courses</a>
+          <a href="/" class="nav-item nav-link not-allowed">Team</a>
+          <a href="/" class="nav-item nav-link not-allowed">Gallery</a>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Pages</a>
+            <div class="dropdown-menu rounded-0 m-0">
+              <a href="/" class="dropdown-item not-allowed">Blogs</a>
+              <a href="/" class="dropdown-item not-allowed">Notifications</a>
             </div>
-            <button id="closeButton"><img src="./public/icons/crosss.png" class="rounded-full p-2" alt="close"
-                    width="50" height="50"></button>
+          </div>
+          <a href="../pages/contact.html" class="nav-item nav-link not-allowed">Contact</a>
         </div>
-    </section>
+        <a href="/" class="btn btn-primary px-4 " >Login</a>
+      </div>
+    </nav>
+  </div>
+  <!-- Navbar End -->
 
-    <!-- Pops -->
-    <div class="pops w-60 h-80 absolute top-30 p-2 ">
-        <ul>
-            <a>
-                <li class="pop bg-white w-48 h-10 flex justify-start items-center gap-2 shadow-md p-2 "><span><img
-                            src="./public/icons/Donation-Symbol-PNG.png" width="40" height="25" alt=""></span>
-                    <span>Donate</span>
+  <!-- popup -->
+  <section class="notification_popup-_sec">
+    <span onclick="closePop()" id="close-icon"><img src="/img/icons/close-icon.png" alt="x" width="30"
+        height="30"></span>
+
+    <div class="notification_popup">
+
+      <p>Hi, Welcome to SynapseSkills. There's no update today.</p>
+
+    </div>
+  </section>
+
+
+  <!-- Header Start -->
+  <div class="container-fluid bg-secondary px-0 px-md-5 mb-5">
+    <div class="row m-0 align-items-center px-3">
+      <div class="col-lg-6 text-center text-lg-left">
+        <h4 class="text-white mb-4 mt-5 mt-lg-0">Learn Together Grow Together</h4>
+        <h1 class="display-3 font-weight-bold text-white">
+          SynapseSkills
+        </h1>
+        <p class="text-white mb-4">
+          Welcome to Synapse Community, where learning and growth are not just goals, but a way of life. We are a
+          vibrant, inclusive, and dynamic community dedicated to fostering lifelong learning and personal development.
+          Our mission is to bring together individuals from diverse backgrounds to share knowledge, experiences, and
+          skills in an environment that promotes mutual growth and support.
+        </p>
+        <p class="text-warning">The Synapse Community was founded by students from the BSCS Department at the National
+          University of Modern
+          Languages (NUML), Karachi, in April 2024.</p>
+        <a href="" class="btn bg-primary text-light mt-1 py-2 px-4">Join Us</a>
+      </div>
+      <div class="col-lg-6 text-center text-lg-right">
+        <img class="img-fluid mt-5" src="/assets/img/synapseskills-team.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <!-- Header End -->
+
+  <!-- Facilities Start -->
+  <div class="container-fluid pt-5">
+    <div class="container pb-3">
+      <div class="row m-0">
+        <div class="col-lg-4 col-md-6 pb-1">
+          <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px">
+            <i class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"></i>
+            <!-- <i class="fi fi-rr-users-alt h1 font-weight-normal text-primary mb-3"></i> -->
+            <i class="fi fi-rr-star h1 font-weight-normal text-primary mb-3"></i>
+            <div class="pl-4">
+              <h4>Learning Together, Together We Grow</h4>
+              <p class="m-0">
+                Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+                lorem amet elitr vero...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 pb-1">
+          <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px">
+            <i class="flaticon-022-drum h1 font-weight-normal text-primary mb-3"></i>
+            <div class="pl-4">
+              <h4>Sharing Thoughts & Ideas</h4>
+              <p class="m-0">
+                Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+                lorem amet elitr vero...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 pb-1">
+          <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px">
+            <i class="flaticon-030-crayons h1 font-weight-normal text-primary mb-3"></i>
+            <div class="pl-4">
+              <h4>Become a Community Member</h4>
+              <p class="m-0">
+                Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+                lorem amet elitr vero...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 pb-1">
+          <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px">
+            <i class="flaticon-017-toy-car h1 font-weight-normal text-primary mb-3"></i>
+            <div class="pl-4">
+              <h4>Become a Volunteer & Sponsor</h4>
+              <p class="m-0">
+                Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+                lorem amet elitr vero...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 pb-1">
+          <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px">
+            <i class="flaticon-025-sandwich h1 font-weight-normal text-primary mb-3"></i>
+            <div class="pl-4">
+              <h4>Meetups, Bootcamps & Mentorship Programs</h4>
+              <p class="m-0">
+                Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+                lorem amet elitr vero...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 pb-1">
+          <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px">
+            <i class="flaticon-047-backpack h1 font-weight-normal text-primary mb-3"></i>
+            <div class="pl-4">
+              <h4>Online & Onsite Courses</h4>
+              <p class="m-0">
+                Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
+                lorem amet elitr vero...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Facilities Start -->
+
+  <!-- About Start -->
+  <div class="container-fluid py-5">
+    <div class="container">
+      <div class="row m-0 align-items-center">
+        <div class="col-lg-5">
+          <img class="img-fluid rounded mb-5 mb-lg-0" src="./assets/img/ads/Web-Dev-course.jpg" alt="" />
+        </div>
+        <div class="col-lg-7">
+          <p class="section-title pr-5">
+            <span class="pr-2">Enrollment Open</span>
+          </p>
+          <h1 class="mb-4">Web Development</h1>
+          <p>
+            Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo
+            dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo.
+            Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
+            dolor
+          </p>
+          <div class="row m-0 pt-2 pb-4">
+    
+            <div class="col-12 col-md-12">
+              <ul class="list-inline m-0">
+                <li class="py-2 border-top border-bottom">
+                  <i class="fa fa-check text-primary mr-3"></i>Labore eos amet
+                  dolor amet diam
                 </li>
-            </a>
-
-        </ul>
-
-    </div>
-
-
-    <div class="banner-section">
-        <div class="text-white  md:p-10">
-            <h2 class="text-4xl md:text-6xl font-bold shadow-blue-500 pb-2">Synapse Community</h2>
-            <p class="pb-4 text-xl text-cyan-300">Learn Together Grow Together</p>
-            <p class="md:w-[75%] pb-2 text-gray-300 text-gray-200">Welcome to Synapse Community, where learning and
-                growth are not just goals, but a way of life. We are a vibrant, inclusive, and dynamic community
-                dedicated to fostering lifelong learning and personal development. Our mission is to bring together
-                individuals from diverse backgrounds to share knowledge, experiences, and skills in an environment that
-                promotes mutual growth and support.</p>
-            <p class="pb-2 md:w-[75%] text-cyan-300  duration-500">The Synapse Community was founded by students from
-                the BSCS Department at the National University of Modern Languages (NUML), Karachi, in April 2024.
-                </b></p>
-            <a href="https://chat.whatsapp.com/CHA8utzNcmaCgwsLA9LWtR"><button type="button"
-                    class="btn btn-primary hover:rounded-t-sm" clsas="">Join Our Community</button></a>
-
-            <a href="https://wa.me/923122646268" target="_blank">
-                <button type="button" class="btn btn-outline-primary">Contact</button>
-            </a>
+                <li class="py-2 border-bottom">
+                  <i class="fa fa-check text-primary mr-3"></i>Etsea et sit
+                  dolor amet ipsum
+                </li>
+                <li class="py-2 border-bottom">
+                  <i class="fa fa-check text-primary mr-3"></i>Diam dolor diam
+                  elitripsum vero.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a href="" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
         </div>
+      </div>
     </div>
+  </div>
+  <!-- About End -->
 
-    <div class="max-w-2xl mx-auto">
-        <div class="accordion border-b border-gray-200 mb-4">
-            <button
-                class="accordion-header w-full bg-[#003366] font-bold py-2 px-6 text-white focus:outline-none text-2xl ">
-                Current Courses
-            </button>
-            <div class="grid grid-cols-1   p-2">
-                <div class="bg-red-300">
-                    <img src="./public/images/ads/Web-Dev-course.jpg" alt="" class="w-[190%]">
+  <!-- Categories -->
+  <div class="container-fluid pt-5">
+    <div class="container">
+      <div class="text-center pb-2">
+        <p class="section-title px-5">
+          <span class="px-2">Popular Categories</span>
+        </p>
+        <h1 class="mb-4">Categories</h1>
+      </div>
+      <div class="row m-0">
+        <div class="col-lg-4 mb-5">
+          <div class="card border-0 bg-light shadow-sm pb-2">
+            <img class="card-img-top mb-2" src="./assets/img/course_images/programming.jpg" alt="" />
+            <div class="card-body text-center">
+              <h4 class="card-title">Programming & <br> Artificial Intelligence</h4>
+              <p class="card-text">
+                Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
+                ipsum duo et no et, ipsum ipsum erat duo amet clita duo
+              </p>
+            </div>
+            <!-- <div class="card-footer bg-transparent py-4 px-5">
+              <div class="row m-0 border-bottom">
+                <div class="col-6 py-1 text-right border-right">
+                  <strong>Age of Kids</strong>
                 </div>
+                <div class="col-6 py-1">3 - 6 Years</div>
+              </div>
+              <div class="row m-0 border-bottom">
+                <div class="col-6 py-1 text-right border-right">
+                  <strong>Total Seats</strong>
+                </div>
+                <div class="col-6 py-1">40 Seats</div>
+              </div>
+              <div class="row m-0 border-bottom">
+                <div class="col-6 py-1 text-right border-right">
+                  <strong>Class Time</strong>
+                </div>
+                <div class="col-6 py-1">08:00 - 10:00</div>
+              </div>
+              <div class="row m-0">
+                <div class="col-6 py-1 text-right border-right">
+                  <strong>Tution Fee</strong>
+                </div>
+                <div class="col-6 py-1">$290 / Month</div>
+              </div>
+            </div> -->
+            <a href="" class="btn btn-primary px-4 mx-auto mb-4">Explore Now</a>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-5">
+          <div class="card border-0 bg-light shadow-sm pb-2">
+            <img class="card-img-top mb-2" src="./assets/img/course_images/marketing.jpg" alt="" />
+            <div class="card-body text-center">
+              <h4 class="card-title">Graphic Design & <br> Marketing</h4>
+              <p class="card-text">
+                Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
+                ipsum duo et no et, ipsum ipsum erat duo amet clita duo
+              </p>
+            </div>
+            <a href="" class="btn btn-primary px-4 mx-auto mb-4">Explore Now</a>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-5 ">
+          <div class="card border-0 bg-light shadow-sm pb-2">
+            <img class="card-img-top mb-2" src="./assets/img/course_images/personal-dev.jpg" alt="" />
+            <div class="card-body text-center">
+              <h4 class="card-title">Personal Development & <br> Management</h4>
+              <p class="card-text">
+                Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
+                ipsum duo et no et, ipsum ipsum erat duo amet clita duo
+              </p>
             </div>
 
+            <a href="" class="btn btn-primary px-4 mx-auto mb-4">Explore Now</a>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+  <!-- Categories End -->
 
+  <!-- Registration Start -->
+  <!-- <div class="container-fluid py-5">
+    <div class="container">
+      <div class="row m-0 align-items-center">
+        <div class="col-lg-7 mb-5 mb-lg-0">
+          <p class="section-title pr-5">
+            <span class="pr-2">Book A Seat</span>
+          </p>
+          <h1 class="mb-4">Book A Seat For Your Kid</h1>
+          <p>
+            Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo
+            dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo.
+            Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
+            dolor
+          </p>
+          <ul class="list-inline m-0">
+            <li class="py-2">
+              <i class="fa fa-check text-success mr-3"></i>Labore eos amet
+              dolor amet diam
+            </li>
+            <li class="py-2">
+              <i class="fa fa-check text-success mr-3"></i>Etsea et sit dolor
+              amet ipsum
+            </li>
+            <li class="py-2">
+              <i class="fa fa-check text-success mr-3"></i>Diam dolor diam
+              elitripsum vero.
+            </li>
+          </ul>
+          <a href="" class="btn btn-primary mt-4 py-2 px-4">Book Now</a>
+        </div>
+        <div class="col-lg-5">
+          <div class="card border-0">
+            <div class="card-header bg-secondary text-center p-4">
+              <h1 class="text-white m-0">Book A Seat</h1>
+            </div>
+            <div class="card-body rounded-bottom bg-primary p-5">
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                </div>
+                <div class="form-group">
+                  <select class="custom-select border-0 px-4" style="height: 47px">
+                    <option selected>Select A Class</option>
+                    <option value="1">Class 1</option>
+                    <option value="2">Class 1</option>
+                    <option value="3">Class 1</option>
+                  </select>
+                </div>
+                <div>
+                  <button class="btn btn-secondary btn-block border-0 py-3" type="submit">
+                    Book Now
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- Registration End -->
 
+  <!-- Team Start -->
+  <div class="container-fluid pt-5">
+    <div class="container">
+      <div class="text-center pb-2">
+        <p class="section-title px-5">
+          <span class="px-2">Our Team</span>
+        </p>
+        <h1 class="mb-4">Meet Our Team</h1>
+      </div>
+      <div class="row m-0">
+        <div class="col-md-6 col-lg-3 text-center team mb-5">
+          <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
+            <img class="img-fluid w-100" src="./assets/img/profile.png" alt="profile" />
+            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <h4>Julia Smith</h4>
+          <i>Volunteer</i>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center team mb-5">
+          <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
+            <img class="img-fluid w-100" src="./assets/img/profile.png" alt="profile" />
+            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <h4>Jhon Doe</h4>
+          <i>Graphic Designer</i>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center team mb-5">
+          <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
+            <img class="img-fluid w-100" src="./assets/img/profile.png" alt="profile" />
+            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <h4>Zoha Ross</h4>
+          <i>Content Creater</i>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center team mb-5">
+          <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
+            <img class="img-fluid w-100" src="./assets/img/profile.png" alt="profile" />
+            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <h4>Donald John</h4>
+          <i>Programmer</i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Team End -->
 
-    <section class="course-reg flex justify-center">
+  <!-- Testimonial Start -->
+  <div class="container-fluid py-5">
+    <div class="container p-0">
+      <div class="text-center pb-2">
+        <p class="section-title px-5">
+          <span class="px-2">Testimonial</span>
+        </p>
+        <h1 class="mb-4">What People Say!</h1>
+      </div>
+      <div class="owl-carousel testimonial-carousel">
+        <div class="testimonial-item px-3">
+          <div class="bg-light shadow-sm rounded mb-4 p-4">
+            <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+            Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
+            eirmod clita lorem. Dolor tempor ipsum clita
+          </div>
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="img/testimonial-1.jpg" style="width: 70px; height: 70px" alt="Image" />
+            <div class="pl-3">
+              <h5>Adam </h5>
+              <i>Contenet Creator</i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item px-3">
+          <div class="bg-light shadow-sm rounded mb-4 p-4">
+            <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+            Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
+            eirmod clita lorem. Dolor tempor ipsum clita
+          </div>
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="img/testimonial-2.jpg" style="width: 70px; height: 70px" alt="Image" />
+            <div class="pl-3">
+              <h5>Neha</h5>
+              <i>Student</i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item px-3">
+          <div class="bg-light shadow-sm rounded mb-4 p-4">
+            <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+            Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
+            eirmod clita lorem. Dolor tempor ipsum clita
+          </div>
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="img/testimonial-3.jpg" style="width: 70px; height: 70px" alt="Image" />
+            <div class="pl-3">
+              <h5>Mr. John</h5>
+              <i>Professor</i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item px-3">
+          <div class="bg-light shadow-sm rounded mb-4 p-4">
+            <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+            Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
+            eirmod clita lorem. Dolor tempor ipsum clita
+          </div>
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="img/testimonial-4.jpg" style="width: 70px; height: 70px" alt="Image" />
+            <div class="pl-3">
+              <h5>Zeeshan</h5>
+              <i>Student</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonial End -->
 
-        <a href="https://forms.gle/gMi6DY79wjYHc9Ca8"> <button
-                class="bg-blue-700 px-12 py-2  text-white hover:rounded-tr-md hover:rounded-bl-md hover:scale-110 duration-500 ">Apply
-                Here</button>
+  <!-- Blog Start -->
+  <div class="container-fluid pt-5">
+    <div class="container">
+      <div class="text-center pb-2">
+        <p class="section-title px-5">
+          <span class="px-2">Latest Blog</span>
+        </p>
+        <h1 class="mb-4">Latest Articles From Blog</h1>
+      </div>
+      <div class="row m-0 pb-3">
+        <div class="col-lg-4 mb-4">
+          <div class="card border-0 shadow-sm mb-2">
+            <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="" />
+            <div class="card-body bg-light text-center p-4">
+              <h4 class="">Diam amet eos at no eos</h4>
+              <div class="d-flex justify-content-center mb-3">
+                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
+                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
+                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+              </div>
+              <p>
+                Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
+                eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
+                lorem. Tempor ipsum justo amet stet...
+              </p>
+              <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card border-0 shadow-sm mb-2">
+            <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
+            <div class="card-body bg-light text-center p-4">
+              <h4 class="">Diam amet eos at no eos</h4>
+              <div class="d-flex justify-content-center mb-3">
+                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
+                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
+                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+              </div>
+              <p>
+                Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
+                eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
+                lorem. Tempor ipsum justo amet stet...
+              </p>
+              <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card border-0 shadow-sm mb-2">
+            <img class="card-img-top mb-2" src="img/blog-3.jpg" alt="" />
+            <div class="card-body bg-light text-center p-4">
+              <h4 class="">Diam amet eos at no eos</h4>
+              <div class="d-flex justify-content-center mb-3">
+                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
+                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
+                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+              </div>
+              <p>
+                Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
+                eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
+                lorem. Tempor ipsum justo amet stet...
+              </p>
+              <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Blog End -->
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="row m-0 pt-5">
+      <div class="col-lg-3 col-md-6 mb-5">
+        <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px">
+
+          <img src="/assets/logos/synapse_logo.png" alt="synapse_logo" width="250" height="80">
         </a>
-    </section>
-
-    <!-- Contant -->
-    <section class="md:px-20 py-20">
-        <!-- Hero section -->
-        <h1 class="text-2xl underline">Categories</h1>
-        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center gap-2 my-5 text-white text-2xl">
-            <div
-                class="bg-[#003366] h-40 flex items-center justify-center cursor-pointer hover:bg-[#336699] duration-500 ">
-                <h1>Personal Development</h1>
-            </div>
-            <div
-                class="bg-[#003366] h-40 flex items-center justify-center  cursor-pointer hover:bg-[#336699] duration-500">
-                <h1>Computer Science</h1>
-            </div>
-
-            <div
-                class="bg-[#003366] h-40 flex items-center justify-center  cursor-pointer hover:bg-[#336699] duration-500">
-                <h1>Business</h1>
-            </div>
-
-            <div
-                class="bg-[#003366] h-40 flex items-center justify-center  cursor-pointer hover:bg-[#336699] duration-500">
-                <h1>Physical & Mental Health</h1>
-            </div>
-        </section>
-        <!-- <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
- -->
-
-        <section class="text-gray-600 body-font">
-            <h1 class="text-2xl underline">Statistics</h1>
-            <div class="container px-5 py-12 mx-auto">
-                <div class="flex flex-wrap -m-4 text-center">
-                    <div class="p-4 sm:w-1/4 w-1/2">
-                        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">20+</h2>
-                        <p class="leading-relaxed">Registered Users</p>
-                    </div>
-                    <div class="p-4 sm:w-1/4 w-1/2">
-                        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">25+</h2>
-                        <p class="leading-relaxed">Courses</p>
-                    </div>
-                    <div class="p-4 sm:w-1/4 w-1/2">
-                        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">01</h2>
-                        <p class="leading-relaxed">Meetups Held</p>
-                    </div>
-                    <div class="p-4 sm:w-1/4 w-1/2">
-                        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">02</h2>
-                        <p class="leading-relaxed">Projects Running</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Founder Message -->
-
-        <section class="text-gray-600 body-font">
-            <div class="container px-5 py-20 mx-auto">
-                <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                        class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
-                        <path
-                            d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
-                        </path>
-                    </svg>
-                    <p class="leading-relaxed text-lg">"Welcome to Synapse Skills, where learning isn't just a
-                        journey—it's a transformative experience. At Synapse Skills, we believe in the power of
-                        collaboration and continuous growth. Our platform is designed to ignite curiosity, foster
-                        innovation, and empower individuals and teams to thrive in today's dynamic world.
-
-                        As the CEO and Founder, I envisioned Synapse Skills as more than just an educational platform.
-                        It's a community where knowledge meets opportunity, where every learner can sharpen their skills
-                        and expand their horizons. Whether you're a professional looking to enhance your expertise or an
-                        organization seeking to empower your workforce, we're here to support your journey.
-
-                        Join us at Synapse Skills and unlock your potential. Together, let's learn, innovate, and
-                        grow—together."</p>
-                    <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-                    <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Abid Khokhar </h2>
-                    <p class="text-gray-500">Founder & CEO, SynapseSkills</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- What We Offer -->
-        <section class="bg-[#003366] mt-2 py-10  text-white overflow-hidden">
-            <h2 class="text-center text-4xl font-bold underline text-white pb-20 pt-5">What We Offer
-            </h2>
-            <div class=" mx-2 lg:mx-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
-
-                <div class="vision-content px-10 flex flex-col text-center  items-center">
-                    <img src="./public/icons/logo (4).jpg" alt="" width="100" height="100" class="rounded-full">
-                    <h2 class="text-2xl font-bold py-2">Workshops and Seminars</h2>
-                    <p class=" text-gray-200"> Regular workshops and seminars led by experts in various fields to help
-                        you acquire new skills and knowledge.</p>
-                </div>
-                <div class="vision-content px-10 flex flex-col text-center  items-center">
-                    <img src="./public/icons/logo (3).jpg" alt="" width="100" height="100" class="rounded-full">
-                    <h2 class="text-2xl font-bold py-2">Mentorship Programs</h2>
-                    <p class=" text-gray-200">One-on-one and group mentorship opportunities to guide you on your
-                        personal and professional journey.</p>
-                </div>
-                <div class="vision-content px-10 flex flex-col text-center  items-center">
-                    <img src="./public/icons/logo (1).jpg" alt="" width="100" height="100" class="rounded-full">
-                    <h2 class="text-2xl font-bold py-2">Learning Resources</h2>
-                    <p class=" text-gray-200">Access a wealth of online resources, including articles, videos, and
-                        courses, to support your learning journey.</p>
-                </div>
-                <div class="vision-content px-10 flex flex-col text-center items-center">
-                    <img src="./public/icons/logo (2).jpg" alt="" width="100" height="100" class="rounded-full">
-                    <h2 class="text-2xl font-bold py-2">Community Projects</h2>
-                    <p class=" text-gray-200"> Participate in community-driven projects that allow you to apply your
-                        skills in real-world scenarios and make a positive impact.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Upcoming Events -->
-        <section class="py-20 ">
-            <h2 class="text-center text-4xl font-bold underline text-[#003366] py-10">Upcoming Events/Meetups</h2>
-
-            <div class="grid gird-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center justify-content ">
-
-                <div
-                    class="testinomial-1 flex flex-col items-center text-center p-3 bg-gray-100 hover:bg-white hover:scale-105 duration-500">
-                    <img src="../public/images/smal-imgs/artificial-intelligence-6767502_1280.jpg" alt="" class="">
-                    <h2 class="text-2xl font-bold py-4">AI-Machine Learning</h2>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid vero unde distinctio,
-                        impedit quibusdam. Eligendi at natus illum. Labore tenetur accusamus porro alias minima aliquid
-                        dolore odit sequi expedita!"</p>
-                </div>
-                <div
-                    class="testinomial-1 flex flex-col items-center text-center p-3 bg-gray-100 hover:bg-white hover:scale-105 duration-500">
-                    <img src="../public/images/smal-imgs/kids-6960579_1280.jpg" alt="" class="">
-                    <h2 class="text-2xl font-bold py-4">Public Awerness</h2>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid vero unde distinctio,
-                        impedit quibusdam. Eligendi at natus illum. Labore tenetur accusamus porro alias minima aliquid
-                        dolore odit sequi expedita!"</p>
-                </div>
-                <div
-                    class="testinomial-1 flex flex-col items-center text-center p-3 bg-gray-100 hover:bg-white hover:scale-105 duration-500">
-                    <img src="../public/images/smal-imgs/drowning-5654815_1280.jpg" alt="" class="">
-                    <h2 class="text-2xl font-bold py-4">Hard Work</h2>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid vero unde distinctio,
-                        impedit quibusdam. Eligendi at natus illum. Labore tenetur accusamus porro alias minima aliquid
-                        dolore odit sequi expedita!"</p>
-                </div>
-            </div>
-
-        </section>
-
-    </section>
-
-
-
-    <footer
-        class="bg-[#003366] text-white md:px-10 py-5 min-h-48 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center items-center ">
-        <!-- Logo -->
-        <div class="synapse-logo2 mx-auto"><img src="./public/logo/synapse.png" alt="logo" width="200" height="150">
-            <p>Learn Together Grow Together</p>
+        <p class="px-4" style="font-size: 12px;">
+          Welcome to Synapse Community, where learning and growth are not just goals, but a way of life. We are a
+          vibrant, inclusive, and dynamic community dedicated to fostering lifelong learning and personal development.
+        </p>
+        <div class="d-flex justify-content-start mt-4">
+          <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px"
+            href="#"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px"
+            href="#"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px"
+            href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px"
+            href="#"><i class="fab fa-instagram"></i></a>
         </div>
-
-        <div class="flex gap-10 justify-evenly">
-            <!-- Links -->
-            <div class=" text-start">
-                <p class="font-bold text-xl underline py-4 ">Navigations</p>
-                <p class=""><a href="#">Home</a></p>
-                <p><a href="#">Courses</a></p>
-                <p><a href="#">Meetups</a></p>
-                <p><a href="#">About Us</a></p>
-                <p><a href="#">Contact Us</a></p>
-            </div>
-            <!-- Links -->
-            <div class="text-start ">
-                <p class="font-bold text-xl underline py-4 ">Quick Links</p>
-                <p><a href="./pages/books/index.html">Books</p>
-                <p><a href="./pages/synapse-Id-card/index.html">Download ID Card</a></p>
-                <p><a href="#">Meetups</a></p>
-                <p><a href="#">About Us</a></p>
-                <p><a href="#">Contact Us</a></p>
-
-            </div>
-
-
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h3 class="text-primary mb-4">Get In Touch</h3>
+        <div class="d-flex">
+          <h4 class="fa fa-map-marker-alt text-primary"></h4>
+          <div class="pl-3">
+            <h5 class="text-white">Address</h5>
+            <p>Karachi, Pakistan</p>
+          </div>
         </div>
-        <div class="footer-newsletter text-white py-4 text-start px-2">
-            <h2 class="font-bold text-xl underline">NEWSLETTER</h2>
-            <form class="form-inline pt-2">
-                <div class="form-group mb-2">
-                    <input type="email" class="form-control" id="inputPassword2" placeholder="abc@gmail.com" required
-                        aria-colspan="text-gray-400">
-                </div>
-                <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
-            </form>
+        <div class="d-flex">
+          <h4 class="fa fa-envelope text-primary"></h4>
+          <div class="pl-3">
+            <h5 class="text-white">Email</h5>
+            <p>synapse.edu.pk@gmail.com</p>
+          </div>
         </div>
-    </footer>
-    <div class="foots p-2 flex flex-wrap justify-center items-center gap-x-5">
-        <p>© 2024 Copyright: Synapse</p>
-        <p>Developed by : <span>Synapse Team</span></p>
+        <div class="d-flex">
+          <h4 class="fa fa-phone-alt text-primary"></h4>
+          <div class="pl-3">
+            <h5 class="text-white">Phone</h5>
+            <p>+92 3272686365</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h3 class="text-primary mb-4">Quick Links</h3>
+        <div class="d-flex flex-column justify-content-start">
+          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Courses</a>
+          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Teachers</a>
+          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Blog</a>
+          <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h3 class="text-primary mb-4">Newsletter</h3>
+        <form action="">
+          <div class="form-group">
+            <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control border-0 py-4" placeholder="Your Email" required="required" />
+          </div>
+          <div>
+            <button class="btn btn-primary btn-block border-0 py-3" type="submit">
+              Submit Now
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
+    <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;">
+      <p class="m-0 text-center text-white">
+        &copy;
+        <a class="text-primary font-weight-bold" href="#">SynapseSkills</a>.
+        All Rights Reserved.
 
-            // Wait for 5 seconds and then show the popup
+        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+        Designed by
+        <a class="text-primary font-weight-bold" href="https://htmlcodex.com">Abid Khokhar</a>
+        <br />Developed By:
+        <a href="https://themewagon.com" target="_blank">SynapseSkills Team</a>
+      </p>
+    </div>
+  </div>
+  <!-- Footer End -->
 
-            // Close the popup after 10 seconds
-            setTimeout(function () {
-                document.getElementById('t-popup').style.display = 'none';
-            }, 5000);
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-            // Close button functionality
-            document.getElementById('closeButton').addEventListener('click', function () {
-                document.getElementById('t-popup').style.display = 'none';
-            });
-        });
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./app.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="../lib/easing/easing.min.js"></script>
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="../lib/lightbox/js/lightbox.min.js"></script>
+
+  <!-- Contact Javascript File -->
+  <script src="../mail/jqBootstrapValidation.min.js"></script>
+  <script src="../mail/contact.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+  <script src="../lib/pupups/popups.js"></script>
 </body>
 
 </html>

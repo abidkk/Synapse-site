@@ -1,7 +1,0 @@
-[build]
-  functions = "backend" # Change this to match your functions directory
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/index"
-  status = 200
